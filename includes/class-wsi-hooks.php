@@ -104,7 +104,7 @@ class WSI_Hooks {
 		$time = current_time( 'mysql' );
 
 		// sanitize file name
-		$filename = $this->last_filename = sanitize_file_name( apply_filters( 'wsi_file_prefix', 'wsi-' . WSI_The_Golden_Retriever::get_engine( true ) ) . '-' . basename( $file['url'] ) );
+		$filename = $this->last_filename = sanitize_file_name( apply_filters( 'wsi_file_prefix', 'wsi-' . WSI_The_Golden_Retriever::get_engine( true ) . '-' ) . basename( $file['url'] ) );
 
 		$file_array = array(
 			'name' 		=> $filename,

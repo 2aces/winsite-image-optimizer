@@ -266,7 +266,7 @@ class WSI_Retro_Processor {
 			update_post_meta( $image->ID, '_wsi_original_filesize', filesize( $fullsizepath ) );
 
 			// Should we unlink this file?
-			if ( winsite_image_optimizer()->retro->get_setting( 'should-keep-original' ) != '1' ) {
+			if ( winsite_image_optimizer()->retro->get_setting( 'should-keep-original' ) !== '1' ) {
 				// Delete old image while we're at it
 				unlink( $fullsizepath );
 			}
